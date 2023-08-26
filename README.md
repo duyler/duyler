@@ -1,2 +1,2 @@
-# jine
+# Duyler
 ### Scenario-driven architecture framework
