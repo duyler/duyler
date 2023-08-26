@@ -1,0 +1,4 @@
+/vendor
+/docker/databases
+/docker/logs
+.idea
