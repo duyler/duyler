@@ -1,2 +1,2 @@
 # jine
-Event-driven architecture framework
+### Scenario-driven architecture framework
