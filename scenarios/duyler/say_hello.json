@@ -1,5 +1,5 @@
 {
-    "id": "Duyler.SeyHello",
+    "id": "Duyler.SayHello",
     "description": "Say Hello!",
     "authors": [
         {
@@ -9,7 +9,7 @@
     ],
     "actions": [
         {
-            "id": "Duyler.SeyHello",
+            "id": "Duyler.SayHello"
         }
     ]
 }
