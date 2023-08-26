@@ -14,8 +14,7 @@ services:
     - php-fpm
 
   php-fpm:
-    build:
-      context: docker/php-fpm
+    image: duyler/php-fpm-zts:latest
     ports:
     - 9000:9000
     volumes:

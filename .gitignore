@@ -1,4 +1,6 @@
 /vendor
 /docker/databases
 /docker/logs
+/var
 .idea
+composer.lock
