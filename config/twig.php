@@ -2,9 +2,13 @@
 
 declare(strict_types=1);
 
-return [
-    'path_to_view' => 'resources' . DIRECTORY_SEPARATOR . 'views',
-    'extensions' => [
+use Duyler\TwigWrapper\TwigConfigDto;
 
+return [
+    TwigConfigDto::class => [
+        'pathToViews' => $this->projectRootDir . 'resources' . DIRECTORY_SEPARATOR . 'views',
+        'projectRoot' => $this->projectRootDir,
+        'extensions' => [
+        ],
     ],
 ];
