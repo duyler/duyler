@@ -3,5 +3,9 @@
 declare(strict_types=1);
 
 return [
-    'routes_dir' => 'routes',
+    RouterConfig::class => [
+        'languages' => [],
+        'routesDirPath' => $this->projectRootDir . 'routes/',
+        'routesAliases' => [],
+    ],
 ];

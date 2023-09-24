@@ -1,12 +1,6 @@
 {
     "id": "Duyler.SayHello",
     "description": "Say Hello!",
-    "authors": [
-        {
-            "name": "Mikhail Ilinsky",
-            "email": "mail@milinsky.ru"
-        }
-    ],
     "actions": [
         {
             "id": "Duyler.SayHello"

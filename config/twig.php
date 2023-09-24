@@ -9,6 +9,7 @@ return [
         'pathToViews' => $this->projectRootDir . 'resources' . DIRECTORY_SEPARATOR . 'views',
         'projectRoot' => $this->projectRootDir,
         'extensions' => [
+
         ],
     ],
 ];
