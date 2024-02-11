@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Duyler\Http\ApplicationRunner;
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-require_once dirname('__DIR__') . '/../vendor/autoload.php';
+use Duyler\Http\ApplicationRunner;
 
 $app = new ApplicationRunner();
 
