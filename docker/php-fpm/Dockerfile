@@ -8,5 +8,12 @@ FROM duyler/php-fpm-zts
 ## Run the RoadRunner server command
 #CMD rr serve -c .rr.yaml
 
+# Settings composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
+# Install dependencies
+COPY composer.* /var/www/
+RUN composer install --no-plugins --no-scripts
+
 # Run the React server
 CMD php public/react.php

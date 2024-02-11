@@ -12,7 +12,6 @@ return [
         'pathToViews' => $config->env('PROJECT_ROOT') . 'resources' . DIRECTORY_SEPARATOR . 'views',
         'projectRoot' => $config->env('PROJECT_ROOT'),
         'extensions' => [
-            PhpSyntaxHighlightExtension::class,
         ],
     ],
 ];
