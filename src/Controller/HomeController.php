@@ -11,6 +11,6 @@ class HomeController extends AbstractController
 {
     public function __invoke(): ResponseInterface
     {
-        return $this->render('hello', ['hello' => 'Hello, World']);
+        return $this->render('hello', ['hello' => 'Hello, World!']);
     }
 }
