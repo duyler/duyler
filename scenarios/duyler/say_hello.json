@@ -1,9 +1,0 @@
-{
-    "id": "Duyler.SayHello",
-    "description": "Say Hello!",
-    "actions": [
-        {
-            "id": "Duyler.SayHello"
-        }
-    ]
-}

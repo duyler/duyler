@@ -2,21 +2,13 @@ version: '3'
 
 services:
 
-  nginx:
-    image: nginx:latest
-    ports:
-      - "${APP_DOCKER_HOST_PORT}:80"
-    volumes:
-    - .:/var/www
-    - ./docker/config/nginx:/etc/nginx/conf.d
-    - ./docker/logs/nginx:/var/log/nginx
-    links:
-    - php-fpm
-
   php-fpm:
     image: duyler/php-fpm-zts:latest
+    build:
+      context: ./
+      dockerfile: ./docker/php-fpm/Dockerfile
     ports:
-    - 9000:9000
+      - 80:80
     volumes:
     - .:/var/www
     - ./docker/config/php:/usr/local/etc/php
@@ -24,53 +16,3 @@ services:
       - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    links:
-    - database
-    - redis
-
-  database:
-    hostname: ${RABBITMQ_HOST}
-    image: postgres:latest
-    restart: always
-    environment:
-      - POSTGRES_DB=${DB_DATABASE}
-      - POSTGRES_USER=${DB_USERNAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-    ports:
-      - "${DB_DOCKER_HOST_PORT}:5432"
-    volumes:
-      - ./docker/databases/postgres:/var/lib/postgresql/data
-
-  redis:
-    hostname: ${REDIS_HOST}
-    image: redis:latest
-    restart: always
-    environment:
-      - REDIS_PASSWORD=${REDIS_PASSWORD}
-    ports:
-      - "${REDIS_DOCKER_HOST_PORT}:6379"
-    command: /bin/sh -c "redis-server --requirepass $$REDIS_PASSWORD"
-    volumes:
-      - ./docker/databases/redis:/var/lib/redis/data
-      - ./docker/config/redis/redis.conf:/usr/local/etc/redis/redis.conf
-
-  rabbitmq:
-    hostname: ${RABBITMQ_HOST}
-    image: rabbitmq:management
-    command:
-      - rabbitmq-server
-      - rabbitmq-plugins enable --offline rabbitmq_management
-    ports:
-      - 5672:5672
-      - 15672:15672
-    healthcheck:
-      test: [ "CMD", "nc", "-z", "localhost", "5672" ]
-      interval: 5s
-      timeout: 15s
-      retries: 1
-    volumes:
-      - ./docker/config/rabbitmq/conf:/etc/rabbitmq/
-      - ./docker/logs/rabbitmq:/var/log/rabbitmq/
-    environment:
-      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}

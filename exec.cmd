@@ -1,3 +1,3 @@
 @echo off
-docker compose exec php %*
+docker compose exec php-fpm %*
 
