@@ -1,7 +1,4 @@
-/docker/databases
-/docker/logs
 /var/
-/vendor/
+/vendor
 .idea
 .phpunit.result.cache
-composer.lock
