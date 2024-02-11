@@ -6,7 +6,5 @@ namespace App\Contract;
 
 readonly class Hello
 {
-    public function __construct(public string $seyHello)
-    {
-    }
+    public function __construct(public string $seyHello) {}
 }
