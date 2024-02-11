@@ -8,5 +8,5 @@ FROM duyler/php-fpm-zts
 ## Run the RoadRunner server command
 #CMD rr serve -c .rr.yaml
 
-
+# Run the React server
 CMD php public/react.php

@@ -37,7 +37,7 @@ endif
 
 .PHONY: build
 build: ## Create containers
-	docker compose build
+	docker-compose up -d --build --force-recreate
 
 .PHONY: down
 down: ## Destroy containers
@@ -53,3 +53,11 @@ stop: ## Stop containers
 
 .PHONY: restart
 restart: stop up ## Restart containers
+
+.PHONY: run
+run: ## Run a command in the container
+	$(EXEC) $(filter-out $@,$(MAKECMDGOALS))
+%:
+	@: @echo "Target ignored"
+
+
