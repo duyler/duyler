@@ -39,6 +39,9 @@ endif
 build: ## Create containers
 	docker-compose up -d --build --force-recreate
 
+.PHONY: rebuild ## Recreate containers
+rebuild: down build
+
 .PHONY: down
 down: ## Destroy containers
 	docker compose down --rmi all --volumes --remove-orphans
