@@ -3,6 +3,20 @@
 
 ### Get started
 
+#### Install without host php interpreter
+
+```shell
+
+git clone https://github.com/duyler/duyler.git
+
+cd duyler
+
+make build
+
+```
+
+#### Install using local composer
+
 ```shell
 composer create-project duyler/duyler
 
