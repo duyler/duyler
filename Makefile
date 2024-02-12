@@ -37,7 +37,10 @@ endif
 
 .PHONY: build
 build: ## Create containers
-	docker-compose up -d --build --force-recreate
+	docker compose up -d cli --build --force-recreate
+	docker compose run cli composer install
+	docker-compose up -d php --build --force-recreate
+	docker-compose up -d
 
 .PHONY: rebuild ## Recreate containers
 rebuild: down build

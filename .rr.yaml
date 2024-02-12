@@ -1,8 +1,6 @@
 version: "3"
 server:
-  command: "public/rr.php"
+  command: "php public/rr.php"
 
 http:
   address: 0.0.0.0:80
-  pool:
-    num_workers: 4
