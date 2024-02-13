@@ -18,10 +18,10 @@ endif
 
 ifeq ($(PLATFORM), windows)
 	SHELL = cmd.exe
-	EXEC = exec
+	EXEC = bin\exec
 	HELP_SUPPORTED = $(shell where printf 2>&1 >nul && where awk 2>&1 >nul && echo yes)
 else
-	EXEC = ./exec
+	EXEC = ./bin/exec
 	HELP_SUPPORTED = yes
 endif
 
@@ -59,11 +59,3 @@ stop: ## Stop containers
 
 .PHONY: restart
 restart: stop up ## Restart containers
-
-.PHONY: run
-run: ## Run a command in the container
-	$(EXEC) $(filter-out $@,$(MAKECMDGOALS))
-%:
-	@: @echo "Target ignored"
-
-
