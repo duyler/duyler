@@ -6,7 +6,7 @@
 #### Install without host php interpreter
 
 ```shell
-git clone https://github.com/duyler/duyler.git
+curl -L -O https://github.com/duyler/duyler/archive/refs/heads/master.zip | unzip master.zip -d duyler
 ```
 ```shell
 cd duyler
