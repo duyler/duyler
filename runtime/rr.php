@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-require dirname(__DIR__) . '/vendor/autoload.php';
-
 use Duyler\Http\ApplicationRunner;
 use Nyholm\Psr7\Response;
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Spiral\RoadRunner\Worker;
 use Spiral\RoadRunner\Http\PSR7Worker;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
 
 $worker = Worker::create();
 $factory = new Psr17Factory();
