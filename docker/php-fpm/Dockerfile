@@ -9,4 +9,4 @@ COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
 CMD rr serve -c .rr.yaml
 
 # Run the ReactPHP server
-#CMD php public/react.php
+#CMD php runtime/react.php
