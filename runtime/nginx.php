@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-use Duyler\Framework\ApplicationRunner;
+use Duyler\Http\ApplicationRunner;
+use HttpSoft\Emitter\SapiEmitter;
+use HttpSoft\ServerRequest\ServerRequestCreator;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
