@@ -3,7 +3,7 @@
 
 ### Get started
 
-#### Install without host php interpreter
+#### Install with included docker config and without host php interpreter
 
 ```shell
 curl -L -O https://github.com/duyler/duyler/archive/refs/heads/master.zip | unzip master.zip -d duyler
@@ -13,6 +13,7 @@ cd duyler
 ```
 ```shell
 make build
+make up
 ```
 
 #### Install using local composer
@@ -24,6 +25,6 @@ composer create-project duyler/duyler
 cd duyler
 ```
 ```shell
-make build
+make up
 ```
 Open http://localhost/

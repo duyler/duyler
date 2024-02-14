@@ -39,11 +39,10 @@ endif
 build: ## Create containers
 	docker compose up -d cli --build --force-recreate
 	docker compose run cli composer install
-	docker-compose up -d php --build --force-recreate
-	docker-compose up -d
+	docker compose down cli --rmi all --volumes --remove-orphans
 
 .PHONY: rebuild ## Recreate containers
-rebuild: down build
+rebuild: down build up
 
 .PHONY: down
 down: ## Destroy containers
@@ -51,6 +50,7 @@ down: ## Destroy containers
 
 .PHONY: up
 up: ## Start containers
+	docker-compose up -d php --build --force-recreate
 	docker compose up --detach --remove-orphans
 
 .PHONY: stop
