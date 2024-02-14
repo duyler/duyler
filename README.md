@@ -13,6 +13,8 @@ cd duyler
 ```
 ```shell
 make build
+```
+```shell
 make up
 ```
 
