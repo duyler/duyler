@@ -127,4 +127,8 @@ Controller::build(PageController::class)
 
 #### contract ```Page``` will be received automatically
 
+```shell
+make rebuild
+```
+
 Open http://localhost/page
