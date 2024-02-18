@@ -6,7 +6,10 @@
 #### Install with included docker config and without host php interpreter
 
 ```shell
-curl -L -O https://github.com/duyler/duyler/archive/refs/heads/master.zip | unzip master.zip -d duyler
+curl -L -O https://github.com/duyler/duyler/archive/refs/heads/master.zip
+```
+```shell
+unzip master.zip -d duyler
 ```
 ```shell
 cd duyler
@@ -51,7 +54,7 @@ class GetPageAction
     {
         return new Page(
             title: 'Home',
-            content: 'Hello World',
+            content: 'Hello, World!',
         );
     }
 }
