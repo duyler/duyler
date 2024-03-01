@@ -18,10 +18,10 @@ endif
 
 ifeq ($(PLATFORM), windows)
 	SHELL = cmd.exe
-	EXEC = bin\exec
+	EXEC = bin\do
 	HELP_SUPPORTED = $(shell where printf 2>&1 >nul && where awk 2>&1 >nul && echo yes)
 else
-	EXEC = ./bin/exec
+	EXEC = ./bin/do
 	HELP_SUPPORTED = yes
 endif
 
