@@ -50,7 +50,7 @@ down: ## Destroy containers
 
 .PHONY: up
 up: ## Start containers
-	docker-compose up -d php --build --force-recreate
+	docker compose up -d php --build --force-recreate
 	docker compose up --detach --remove-orphans
 
 .PHONY: stop
