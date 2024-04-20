@@ -34,6 +34,28 @@ make up
 ```
 Open http://localhost/
 
+### Create contract
+
+```php
+
+// src/Contract/Page.php
+
+<?php
+
+declare(strict_types=1);
+
+namespace App\Contact;
+
+readonly class Page
+{
+    public function __construct(
+        public string $title,
+        public string $content,
+    ) {}
+}
+
+```
+
 ### Create action
 
 ```php
