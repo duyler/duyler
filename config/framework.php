@@ -14,6 +14,7 @@ return [
             \Duyler\Http\Loader::class,
             \Duyler\Web\Loader::class,
             \Duyler\Aspect\Loader::class,
+            \Duyler\Multiprocess\Loader::class,
         ],
     ],
 ];
