@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-use Duyler\TwigWrapper\Extensions\PhpSyntaxHighlightExtension;
 use Duyler\TwigWrapper\TwigConfigDto;
-use Duyler\Config\FileConfig;
+use Duyler\Config\ConfigInterface;
 
-/** @var FileConfig $config */
+/** @var ConfigInterface $config */
 return [
     TwigConfigDto::class => [
-        'pathToViews' => $config->env('PROJECT_ROOT') . 'resources' . DIRECTORY_SEPARATOR . 'views',
+        'pathToViews' => $config->env('PROJECT_ROOT') . 'resources/views',
         'projectRoot' => $config->env('PROJECT_ROOT'),
         'extensions' => [
+
         ],
     ],
 ];

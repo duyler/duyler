@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Duyler\Config\FileConfig;
+use Duyler\Config\ConfigInterface;
 use Duyler\Framework\ApplicationLoader;
 
 /**
- * @var FileConfig $config
+ * @var ConfigInterface $config
  */
 return [
     ApplicationLoader::class => [
