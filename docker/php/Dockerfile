@@ -10,3 +10,6 @@ CMD rr serve -c .rr.yaml
 
 # Run the ReactPHP server
 #CMD php runtime/react.php
+
+# Run conslole application
+#CMD php runtime/cli.php
