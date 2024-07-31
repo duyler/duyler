@@ -153,7 +153,7 @@ Controller::build(PageController::class)
 #### contract ```Page``` will be received automatically
 
 ```shell
-make rebuild
+make restart
 ```
 
 Open http://localhost/page
