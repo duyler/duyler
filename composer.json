@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=8.3",
-        "duyler/framework": "dev-main",
+        "duyler/builder": "dev-main",
         "duyler/http": "dev-main",
         "duyler/web": "dev-main",
         "duyler/aspect": "dev-main",
