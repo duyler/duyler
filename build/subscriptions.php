@@ -2,4 +2,4 @@
 
 declare(strict_types=1);
 
-use Duyler\Framework\Build\Subscription\Subscription;
+use Duyler\Builder\Build\Subscription\Subscription;
