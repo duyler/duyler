@@ -6,7 +6,7 @@ use Duyler\Config\ConfigInterface;
 use Duyler\Builder\Build\Action\Action;
 use Duyler\Web\Build\Attribute\Route;
 use Duyler\Web\Build\Attribute\View;
-use Duyler\Web\Enum\Method;
+use Duyler\Web\Enum\HttpMethod;
 
 /** @var ConfigInterface $config */
 
@@ -14,7 +14,7 @@ Action::build(id: 'Duyler.SayHello', handler: function () {})
     ->externalAccess(true)
     ->attributes(
         new Route(
-            method: Method::Get,
+            method:HttpMethod::Get,
             pattern: '/',
         ),
         new View(

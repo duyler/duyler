@@ -15,6 +15,7 @@ return [
             \Duyler\Web\Loader::class,
             \Duyler\Aspect\Loader::class,
             \Duyler\Multiprocess\Loader::class,
+            \Duyler\Database\Loader::class,
         ],
     ],
 ];
