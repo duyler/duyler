@@ -11,7 +11,7 @@ use Duyler\Database\DatabaseConfig;
 return [
     DatabaseConfig::class => [
         'driver' => 'pdo_pgsql',
-        'host' => 'db_host_common',
+        'host' => '',
         'port' => 5432,
         'database' => '',
         'username' => '',
