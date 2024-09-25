@@ -15,9 +15,6 @@ unzip master.zip -d duyler
 cd duyler
 ```
 ```shell
-make build
-```
-```shell
 make up
 ```
 
@@ -137,13 +134,15 @@ use App\Controller\PageController;
 use App\Contract\Page;
 use Duyler\Web\Build\Attribute\Route;
 use Duyler\Web\Build\Controller;
-use Duyler\Web\Enum\Method;
+use Duyler\Web\Enum\HttpMethod;
 
 Controller::build(PageController::class)
-    ->contracts([Page::class])
+    ->actions(
+        'Page.GetPage',
+    )
     ->attributes(
         new Route(
-            method: Method::Get,
+            method: HttpMethod::Get,
             pattern: 'page',
         ),
     );
