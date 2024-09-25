@@ -1,13 +1,7 @@
 #!/usr/bin/make
 
-.PHONY: build
-build: ## Create containers
-	docker compose up -d cli --build --force-recreate
-	docker compose run cli composer install
-	docker compose down cli --rmi all --volumes --remove-orphans
-
 .PHONY: rebuild ## Recreate containers
-rebuild: down build up
+rebuild: down up
 
 .PHONY: down
 down: ## Destroy containers
@@ -15,7 +9,7 @@ down: ## Destroy containers
 
 .PHONY: up
 up: ## Start containers
-	docker compose up -d php
+	docker compose up -d --build --force-recreate
 	docker compose up --detach --remove-orphans
 
 .PHONY: stop

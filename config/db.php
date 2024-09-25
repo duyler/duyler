@@ -17,7 +17,7 @@ return [
         'username' => '',
         'password' => '',
         'charset' => 'utf-8',
-        'entityPaths' => [$config->env('PROJECT_ROOT') . 'src/Entity'],
+        'entityPaths' => [$config->path( 'src/Entity')],
         'isDevMode' => true,
     ],
 ];
