@@ -1,13 +1,5 @@
 services:
 
-  cli:
-    build:
-      context: ./
-      dockerfile: ./docker/php-cli/Dockerfile
-    volumes:
-      - .:/var/www
-      - ./docker/config/php:/usr/local/etc/php
-
   php:
     build:
       context: ./
@@ -22,5 +14,3 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: always
-    depends_on:
-      - cli
