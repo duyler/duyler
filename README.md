@@ -1,4 +1,7 @@
 # Duyler
+
+![PHP Version](https://img.shields.io/packagist/dependency-v/duyler/duyler/php?version=dev-master)
+
 ### Event-driven architecture framework
 
 ### Get started
@@ -91,7 +94,6 @@ declare(strict_types=1);
 use Duyler\Framework\Build\Action\Action;
 
 Action::build(id: 'Page.GetPage', handler: \App\Action\GetPageAction::class)
-    ->externalAccess(true)
     ->contract(\App\Contract\Page::class);
 
 ```
@@ -109,10 +111,10 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Contract\Page;
-use Duyler\Web\AbstractController;
+use Duyler\Web\Controller\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
-class PageController extends AbstractController
+class PageController extends BaseController
 {
     public function __invoke(Page $page): ResponseInterface
     {
