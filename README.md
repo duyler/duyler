@@ -18,7 +18,16 @@ unzip master.zip -d duyler
 cd duyler
 ```
 ```shell
+make build
+```
+```shell
 make up
+```
+
+**For show all available commands**
+
+```shell
+make help
 ```
 
 #### Install using local composer
