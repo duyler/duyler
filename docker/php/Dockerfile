@@ -4,9 +4,6 @@ FROM duyler/php-zts
 
 WORKDIR /var/www
 
-# Install packages
-CMD ["composer", "install"]
-
 # Copy the RoadRunner binary from the roadrunner image to the local bin directory
 COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
 
