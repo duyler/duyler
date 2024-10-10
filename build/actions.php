@@ -10,8 +10,7 @@ use Duyler\Web\Enum\HttpMethod;
 
 /** @var ConfigInterface $config */
 
-Action::build(id: 'Duyler.SayHello', handler: function () {})
-    ->externalAccess(true)
+Action::create()
     ->attributes(
         new Route(
             method:HttpMethod::Get,
