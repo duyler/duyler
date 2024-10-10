@@ -100,9 +100,10 @@ class GetPageAction
 
 declare(strict_types=1);
 
-use Duyler\Framework\Build\Action\Action;
+use Duyler\Builder\Build\Action\Action;
 
-Action::build(id: 'Page.GetPage', handler: \App\Action\GetPageAction::class)
+Action::create(id: 'Page.GetPage')
+    ->handler(handler: \App\Action\GetPageAction::class)
     ->contract(\App\Contract\Page::class);
 
 ```
