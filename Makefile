@@ -48,4 +48,6 @@ stop: ## Stop all containers
 	docker compose stop
 
 .PHONY: restart
-restart: stop up ## Restart all containers
+restart: ## Restart all containers
+	docker compose stop
+	docker compose up -d

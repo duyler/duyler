@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use Duyler\Builder\Config\PackagesConfig;
 use Duyler\Config\ConfigInterface;
-use Duyler\Builder\ApplicationLoader;
 
 /**
  * @var ConfigInterface $config
  */
 return [
-    ApplicationLoader::class => [
+    PackagesConfig::class => [
         'packages' => [
             \Duyler\Http\Loader::class,
             \Duyler\Web\Loader::class,
