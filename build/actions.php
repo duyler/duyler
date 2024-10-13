@@ -8,7 +8,9 @@ use Duyler\Web\Build\Attribute\Route;
 use Duyler\Web\Build\Attribute\View;
 use Duyler\Web\Enum\HttpMethod;
 
-/** @var ConfigInterface $config */
+/**
+ * @var ConfigInterface $config
+ */
 
 Action::create()
     ->attributes(
