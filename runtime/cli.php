@@ -7,8 +7,15 @@ use Duyler\Builder\ApplicationBuilder;
 require dirname(__DIR__) . '/vendor/autoload.php';
 
 $busBuilder = new ApplicationBuilder();
-$busBuilder->getBusBuilder()
+$bus = $busBuilder->getBusBuilder()
     ->loadPackages()
     ->loadBuild()
-    ->loadBuild()
     ->build();
+
+try {
+    $bus->run();
+} catch (Throwable $exception) {
+    $bus->reset();
+    $busBuilder->getContainer()->finalize();
+    echo $exception->getMessage();
+}
