@@ -17,7 +17,7 @@ return [
             \Duyler\Http\Loader::class,
             \Duyler\Web\Loader::class,
             \Duyler\Aspect\Loader::class,
-            \Duyler\Multiprocess\Loader::class,
+            \Duyler\IO\Loader::class,
             \Duyler\Database\Loader::class,
         ],
     ],
