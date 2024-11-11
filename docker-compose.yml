@@ -9,8 +9,4 @@ services:
     volumes:
       - .:/var/www
       - ./docker/config/php:/usr/local/etc/php
-    environment:
-      - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     restart: always

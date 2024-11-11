@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-use Duyler\TwigWrapper\TwigConfigDto;
+use Duyler\TwigWrapper\TwigConfig;
 use Duyler\Config\ConfigInterface;
 
 /**
  * @var ConfigInterface $config
  */
 return [
-    TwigConfigDto::class => [
+    TwigConfig::class => [
         'pathToViews' => $config->path('resources/views'),
-        'projectRoot' => $config->path(),
         'extensions' => [
 
         ],
