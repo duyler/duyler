@@ -10,13 +10,13 @@ use Duyler\Database\DatabaseConfig;
  */
 return [
     DatabaseConfig::class => [
-        'driver' => $config->env('DB_DRIVER'),
-        'host' => $config->env('DB_HOST'),
-        'port' => $config->env('DB_PORT'),
-        'database' => $config->env('DB_NAME'),
-        'username' => $config->env('DB_USER'),
-        'password' => $config->env('DB_PASS'),
-        'charset' => $config->env('DB_CHARSET'),
+        'driver' => $config->env('DB_DRIVER', 'pdo_pgsql'),
+        'host' => $config->env('DB_HOST', 'localhost'),
+        'port' => $config->env('DB_PORT', 5432),
+        'database' => $config->env('DB_NAME', 'duyler'),
+        'username' => $config->env('DB_USER', 'root'),
+        'password' => $config->env('DB_PASS', 'root'),
+        'charset' => $config->env('DB_CHARSET', 'utf-8'),
         'entityPaths' => [$config->path( 'src/Entity')],
         'isDevMode' => true,
     ],
