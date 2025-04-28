@@ -43,17 +43,17 @@ make up
 ```
 Open http://localhost/
 
-### Create contract
+### Create type
 
 ```php
 
-// src/Contract/Page.php
+// src/Type/Page.php
 
 <?php
 
 declare(strict_types=1);
 
-namespace App\Contact;
+namespace App\Type;
 
 readonly class Page
 {
@@ -77,7 +77,7 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Contract\Page;
+use App\Type\Page;
 
 class GetPageAction
 {
@@ -104,7 +104,7 @@ use Duyler\Builder\Build\Action\Action;
 
 Action::create(id: 'Page.GetPage')
     ->handler(handler: \App\Action\GetPageAction::class)
-    ->contract(\App\Contract\Page::class);
+    ->type(\App\Type\Page::class);
 
 ```
 
@@ -120,7 +120,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Contract\Page;
+use App\Type\Page;
 use Duyler\Web\Controller\BaseController;
 use Psr\Http\Message\ResponseInterface;
 
@@ -143,7 +143,7 @@ class PageController extends BaseController
 declare(strict_types=1);
 
 use App\Controller\PageController;
-use App\Contract\Page;
+use App\Type\Page;
 use Duyler\Web\Build\Attribute\Route;
 use Duyler\Web\Build\Controller;
 use Duyler\Web\Enum\HttpMethod;
@@ -161,7 +161,7 @@ Controller::build(PageController::class)
 
 ```
 
-#### contract ```Page``` will be received automatically
+#### type ```Page``` will be received automatically
 
 ```shell
 make restart
