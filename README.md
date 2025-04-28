@@ -2,7 +2,7 @@
 
 ![PHP Version](https://img.shields.io/packagist/dependency-v/duyler/duyler/php?version=dev-master)
 
-### Event-driven architecture framework
+### Event-driven and non-blocking PHP framework
 
 ### Get started
 
