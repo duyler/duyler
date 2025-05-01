@@ -12,7 +12,7 @@
 curl -L -O https://github.com/duyler/duyler/archive/refs/heads/master.zip
 ```
 ```shell
-unzip master.zip -d duyler
+unzip master.zip && mv duyler-master duyler
 ```
 ```shell
 cd duyler
