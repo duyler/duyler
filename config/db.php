@@ -2,22 +2,46 @@
 
 declare(strict_types=1);
 
+use Cycle\Database\Config\Postgres\TcpConnectionConfig;
+use Cycle\Database\Config\PostgresDriverConfig;
 use Duyler\Config\ConfigInterface;
-use Duyler\Database\DatabaseConfig;
+use Duyler\ORM\DBALConfig;
+use Duyler\ORM\Fixture\FixtureConfig;
+use Duyler\ORM\Migration\MigrationConfig;
 
 /**
  * @var ConfigInterface $config
  */
 return [
-    DatabaseConfig::class => [
-        'driver' => $config->env('DB_DRIVER', 'pdo_pgsql'),
-        'host' => $config->env('DB_HOST', 'localhost'),
-        'port' => $config->env('DB_PORT', 5432),
-        'database' => $config->env('DB_NAME', 'duyler'),
-        'username' => $config->env('DB_USER', 'root'),
-        'password' => $config->env('DB_PASS', 'root'),
-        'charset' => $config->env('DB_CHARSET', 'utf-8'),
-        'entityPaths' => [$config->path( 'src/Entity')],
-        'isDevMode' => true,
+
+    DBALConfig::class => [
+        'default' => 'default',
+        'databases' => [
+            'default' => ['connection' => 'postgres']
+        ],
+        'connections' => [
+            'postgres' => new PostgresDriverConfig(
+                connection: new TcpConnectionConfig(
+                    database: $config->env('DB_NAME', ''),
+                    host: $config->env('DB_HOST', ''),
+                    port: $config->env('DB_PORT', ''),
+                    user: $config->env('DB_USER', ''),
+                    password: $config->env('DB_PASS', ''),
+                ),
+                schema: 'public',
+                queryCache: false,
+            ),
+        ]
+    ],
+
+    MigrationConfig::class => [
+        'directory' => $config->path('migrations'),
+        'table' => 'migrations',
+        'safe' => false,
+    ],
+
+    FixtureConfig::class => [
+        'fixtures' => [
+        ],
     ],
 ];

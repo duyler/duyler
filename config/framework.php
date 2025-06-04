@@ -18,7 +18,7 @@ return [
             \Duyler\Web\Loader::class,
             \Duyler\Aspect\Loader::class,
             \Duyler\IO\Loader::class,
-            \Duyler\Database\Loader::class,
+            \Duyler\ORM\Loader::class,
         ],
     ],
 
