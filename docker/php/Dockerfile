@@ -10,8 +10,5 @@ COPY --from=roadrunner /usr/bin/rr /usr/local/bin/rr
 # Run the RoadRunner server command
 CMD rr serve -c .rr.yaml
 
-# Run the ReactPHP server
-#CMD php runtime/react.php
-
-# Run conslole application
+# Run console application
 #CMD php runtime/cli.php
