@@ -38,5 +38,9 @@
             "DataFixtures\\": "fixtures/",
             "Migrations\\": "migrations/"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
     }
 }
