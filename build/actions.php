@@ -12,7 +12,7 @@ use Duyler\Web\Enum\HttpMethod;
  * @var ConfigInterface $config
  */
 
-Action::create()
+Action::declare()
     ->attributes(
         new Route(
             method:HttpMethod::Get,

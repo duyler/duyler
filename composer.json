@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.4",
         "duyler/builder": "dev-main",
         "duyler/http": "dev-main",
         "duyler/web": "dev-main",
@@ -20,6 +20,7 @@
         "duyler/io": "dev-main",
         "duyler/orm": "dev-main",
         "duyler/console": "dev-main",
+        "duyler/scenario": "dev-main",
         "spiral/roadrunner-http": "^3.1",
         "nyholm/psr7": "^1.8"
     },
