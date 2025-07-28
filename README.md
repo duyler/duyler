@@ -102,7 +102,7 @@ declare(strict_types=1);
 
 use Duyler\Builder\Build\Action\Action;
 
-Action::create(id: 'Page.GetPage')
+Action::declare(id: 'Page.GetPage')
     ->handler(handler: \App\Action\GetPageAction::class)
     ->type(\App\Type\Page::class);
 
