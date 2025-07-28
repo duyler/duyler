@@ -18,6 +18,9 @@ unzip master.zip && mv duyler-master duyler
 cd duyler
 ```
 ```shell
+cp .env.example .env
+```
+```shell
 make build
 ```
 ```shell
