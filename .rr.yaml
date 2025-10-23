@@ -1,6 +1,6 @@
 version: "3"
 server:
-  command: "php runtime/rr.php"
+  command: "php runtime/web.php"
 
 http:
   address: 0.0.0.0:80
